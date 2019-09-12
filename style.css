@@ -1,0 +1,132 @@
+/* toto keby chcem vycentrovat aj vertikalne */
+/* html, body {             
+    height: 100%;
+} */
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    font-family: Calibri, sans-serif;
+}
+
+@media only screen and (min-width: 601px) {
+    html {
+        width: 60vw;
+    }
+    body {
+        width: 60vw;
+    }
+  }
+
+p, h2 {
+    text-align: center; 
+}
+
+button {
+    margin: auto;
+    display: block;
+}
+
+input {
+    margin: 1rem;
+}
+
+div {
+    text-align: center;
+}
+
+.cisielka {
+    display: flex;
+    margin-top: 1em;
+    /* flex-flow: row wrap; */
+    /* padding-top: 50px; */
+}
+
+.cisielka button {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+code {
+    background: #EEE;
+    padding: 5px;
+    /* display: block; */
+    text-align: center;
+}
+
+.menu {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-left: 0; /* To remove left indentation */
+    padding-left: 0; /* To remove left indentation */
+    list-style-type: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.menu li {
+    display: inline;
+    padding-right: 1em;
+}
+
+.grid, table {
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.createButton {
+    margin-top: 1em
+}
+
+/* .about {
+    width: 360px;
+} */
+
+a {
+    color: #00B;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#napis {
+    color: darkgreen;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #breakword {
+        overflow: scroll;
+        width: 320px;
+    }
+    #pcmessage {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .cisielka {
+        display: none;
+    }
+}
+
+#breakword {
+    /* display: flex;
+    justify-content: flex-start; */
+    text-align: center;
+    margin-bottom: 1em;
+    position: inherit;
+}
+
+#oneliner {
+    margin-bottom: 2em;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>SUDOKU CREATOR</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="play.htm">Play</a></li>
+        <li><a href="about.htm">About</a></li>
+    </ul>
+    <style>
+            table { border-collapse: collapse; font-family: Calibri, sans-serif;}
+            colgroup, tbody { border: solid medium; }
+            td { border: solid thin; height: 2.4em; width: 2.4em; text-align: center; padding: 0; }
+            </style>
+            <table onkeydown="addNumber">
+              <!-- <caption>Sudoku of the day</caption> -->
+              <colgroup><col><col><col>
+              <colgroup><col><col><col>
+              <colgroup><col><col><col>
+              <tbody>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="00"></td>
+                   <td onclick="oznac(event)" class="policko" id="01"></td>
+                   <td onclick="oznac(event)" class="policko" id="02"></td>
+                   <td onclick="oznac(event)" class="policko" id="03"></td>
+                   <td onclick="oznac(event)" class="policko" id="04"></td>
+                   <td onclick="oznac(event)" class="policko" id="05"></td>
+                   <td onclick="oznac(event)" class="policko" id="06"></td>
+                   <td onclick="oznac(event)" class="policko" id="07"></td>
+                   <td onclick="oznac(event)" class="policko" id="08"></td>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="10"></td>
+                   <td onclick="oznac(event)" class="policko" id="11"></td>
+                   <td onclick="oznac(event)" class="policko" id="12"></td>
+                   <td onclick="oznac(event)" class="policko" id="13"></td>
+                   <td onclick="oznac(event)" class="policko" id="14"></td>
+                   <td onclick="oznac(event)" class="policko" id="15"></td>
+                   <td onclick="oznac(event)" class="policko" id="16"></td>
+                   <td onclick="oznac(event)" class="policko" id="17"></td>
+                   <td onclick="oznac(event)" class="policko" id="18"></td>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="20"></td>
+                   <td onclick="oznac(event)" class="policko" id="21"></td>
+                   <td onclick="oznac(event)" class="policko" id="22"></td>
+                   <td onclick="oznac(event)" class="policko" id="23"></td>
+                   <td onclick="oznac(event)" class="policko" id="24"></td>
+                   <td onclick="oznac(event)" class="policko" id="25"></td>
+                   <td onclick="oznac(event)" class="policko" id="26"></td>
+                   <td onclick="oznac(event)" class="policko" id="27"></td>
+                   <td onclick="oznac(event)" class="policko" id="28"></td>
+              <tbody>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="30"></td>
+                   <td onclick="oznac(event)" class="policko" id="31"></td>
+                   <td onclick="oznac(event)" class="policko" id="32"></td>
+                   <td onclick="oznac(event)" class="policko" id="33"></td>
+                   <td onclick="oznac(event)" class="policko" id="34"></td>
+                   <td onclick="oznac(event)" class="policko" id="35"></td>
+                   <td onclick="oznac(event)" class="policko" id="36"></td>
+                   <td onclick="oznac(event)" class="policko" id="37"></td>
+                   <td onclick="oznac(event)" class="policko" id="38"></td>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="40"></td>
+                   <td onclick="oznac(event)" class="policko" id="41"></td>
+                   <td onclick="oznac(event)" class="policko" id="42"></td>
+                   <td onclick="oznac(event)" class="policko" id="43"></td>
+                   <td onclick="oznac(event)" class="policko" id="44"></td>
+                   <td onclick="oznac(event)" class="policko" id="45"></td>
+                   <td onclick="oznac(event)" class="policko" id="46"></td>
+                   <td onclick="oznac(event)" class="policko" id="47"></td>
+                   <td onclick="oznac(event)" class="policko" id="48"></td>
+               <tr>                
+                   <td onclick="oznac(event)" class="policko" id="50"></td>
+                   <td onclick="oznac(event)" class="policko" id="51"></td>
+                   <td onclick="oznac(event)" class="policko" id="52"></td>
+                   <td onclick="oznac(event)" class="policko" id="53"></td>
+                   <td onclick="oznac(event)" class="policko" id="54"></td>
+                   <td onclick="oznac(event)" class="policko" id="55"></td>
+                   <td onclick="oznac(event)" class="policko" id="56"></td>
+                   <td onclick="oznac(event)" class="policko" id="57"></td>
+                   <td onclick="oznac(event)" class="policko" id="58"></td>
+              <tbody>
+               <tr>               
+                   <td onclick="oznac(event)" class="policko" id="60"></td>
+                   <td onclick="oznac(event)" class="policko" id="61"></td>
+                   <td onclick="oznac(event)" class="policko" id="62"></td>
+                   <td onclick="oznac(event)" class="policko" id="63"></td>
+                   <td onclick="oznac(event)" class="policko" id="64"></td>
+                   <td onclick="oznac(event)" class="policko" id="65"></td>
+                   <td onclick="oznac(event)" class="policko" id="66"></td>
+                   <td onclick="oznac(event)" class="policko" id="67"></td>
+                   <td onclick="oznac(event)" class="policko" id="68"></td>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="70"></td>
+                   <td onclick="oznac(event)" class="policko" id="71"></td>
+                   <td onclick="oznac(event)" class="policko" id="72"></td>
+                   <td onclick="oznac(event)" class="policko" id="73"></td>
+                   <td onclick="oznac(event)" class="policko" id="74"></td>
+                   <td onclick="oznac(event)" class="policko" id="75"></td>
+                   <td onclick="oznac(event)" class="policko" id="76"></td>
+                   <td onclick="oznac(event)" class="policko" id="77"></td>
+                   <td onclick="oznac(event)" class="policko" id="78"></td>
+               <tr> 
+                   <td onclick="oznac(event)" class="policko" id="80"></td>
+                   <td onclick="oznac(event)" class="policko" id="81"></td>
+                   <td onclick="oznac(event)" class="policko" id="82"></td>
+                   <td onclick="oznac(event)" class="policko" id="83"></td>
+                   <td onclick="oznac(event)" class="policko" id="84"></td>
+                   <td onclick="oznac(event)" class="policko" id="85"></td>
+                   <td onclick="oznac(event)" class="policko" id="86"></td>
+                   <td onclick="oznac(event)" class="policko" id="87"></td>
+                   <td onclick="oznac(event)" class="policko" id="88"></td>
+            </table>
+            <div class="cisielka">
+                <button onclick="vlozCislo(1)">1</button>
+                <button onclick="vlozCislo(2)">2</button>
+                <button onclick="vlozCislo(3)">3</button>
+                <button onclick="vlozCislo(4)">4</button>
+                <button onclick="vlozCislo(5)">5</button>
+           </div>
+          <div class="cisielka">
+              <button onclick="vlozCislo(6)">6</button>
+              <button onclick="vlozCislo(7)">7</button>
+              <button onclick="vlozCislo(8)">8</button>
+              <button onclick="vlozCislo(9)">9</button>
+              <button onclick="vlozCislo(0)">X</button>
+          </div>
+         <button onclick="prepis(); readGrid();" class="createButton">New</button>
+    <p id="pcmessage">
+            Use arrows and number keys to navigate through and add numbers to sudoku.
+    </p>
+    <script src="scripts/dlx.js"></script>
+    <script src="scripts/play.js"></script>
+    <script type="text/javascript">
+        window.onload = () => {
+            prepis();
+            readGrid();
+        };
+    </script>
+</body>
+</html>

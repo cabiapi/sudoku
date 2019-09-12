@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>SUDOKU CREATOR</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139597385-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-139597385-1');
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="play.htm">Play</a></li>
+        <li><a href="about.htm">About</a></li>
+    </ul>
+    <h1 id="napis">SUDOKU GENERATOR</h1>
+    <style>
+        table { border-collapse: collapse; font-family: Calibri, sans-serif;}
+        colgroup, tbody { border: solid medium; }
+        td { border: solid thin; height: 2.4em; width: 2.4em; text-align: center; padding: 0; }
+    </style>
+    <table id="grid">
+          <!-- <caption>Sudoku of the day</caption> -->
+          <colgroup><col><col><col>
+          <colgroup><col><col><col>
+          <colgroup><col><col><col>
+          <tbody>
+           <tr> 
+               <td id="00"></td>
+               <td id="01"></td>
+               <td id="02"></td>
+               <td id="03"></td>
+               <td id="04"></td>
+               <td id="05"></td>
+               <td id="06"></td>
+               <td id="07"></td>
+               <td id="08"></td>
+           <tr> 
+               <td id="10"></td>
+               <td id="11"></td>
+               <td id="12"></td>
+               <td id="13"></td>
+               <td id="14"></td>
+               <td id="15"></td>
+               <td id="16"></td>
+               <td id="17"></td>
+               <td id="18"></td>
+           <tr> 
+               <td id="20"></td>
+               <td id="21"></td>
+               <td id="22"></td>
+               <td id="23"></td>
+               <td id="24"></td>
+               <td id="25"></td>
+               <td id="26"></td>
+               <td id="27"></td>
+               <td id="28"></td>
+          <tbody>
+           <tr> 
+               <td id="30"></td>
+               <td id="31"></td>
+               <td id="32"></td>
+               <td id="33"></td>
+               <td id="34"></td>
+               <td id="35"></td>
+               <td id="36"></td>
+               <td id="37"></td>
+               <td id="38"></td>
+           <tr> 
+               <td id="40"></td>
+               <td id="41"></td>
+               <td id="42"></td>
+               <td id="43"></td>
+               <td id="44"></td>
+               <td id="45"></td>
+               <td id="46"></td>
+               <td id="47"></td>
+               <td id="48"></td>
+           <tr>                
+               <td id="50"></td>
+               <td id="51"></td>
+               <td id="52"></td>
+               <td id="53"></td>
+               <td id="54"></td>
+               <td id="55"></td>
+               <td id="56"></td>
+               <td id="57"></td>
+               <td id="58"></td>
+          <tbody>
+           <tr>               
+               <td id="60"></td>
+               <td id="61"></td>
+               <td id="62"></td>
+               <td id="63"></td>    
+               <td id="64"></td>
+               <td id="65"></td>
+               <td id="66"></td>
+               <td id="67"></td>
+               <td id="68"></td>
+           <tr> 
+               <td id="70"></td>
+               <td id="71"></td>
+               <td id="72"></td>
+               <td id="73"></td>
+               <td id="74"></td>
+               <td id="75"></td>
+               <td id="76"></td>
+               <td id="77"></td>
+               <td id="78"></td>
+           <tr> 
+               <td id="80"></td>
+               <td id="81"></td>
+               <td id="82"></td>
+               <td id="83"></td>
+               <td id="84"></td>
+               <td id="85"></td>
+               <td id="86"></td>
+               <td id="87"></td>
+               <td id="88"></td>
+        </table>
+     <div>
+          <input type="checkbox" name="minimal" id="minimal">Make it minimal <br>
+     </div>
+    <button onclick="prepis()">Create!</button>
+    <p id="time">Time of creation: </p>
+    <!-- <p>Parameters:</p> -->
+    <p id="clues">Number of clues:</p>
+    <div id="breakword">
+        <code id="oneliner">
+            Here 81 signs will be shown.
+        </code>
+    </div>
+    <script src="scripts/dlx.js"></script>
+    <script src="scripts/play.js"></script>
+    <script src="scripts/design.js"></script>
+    <script type="text/javascript">
+        window.onload = () => {
+            if (window.innerWidth <= 600) {
+                adaptOneLiner()
+            }
+            prepis();
+        };
+    </script>
+</body>
+</html>
