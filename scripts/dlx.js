@@ -1,5 +1,3 @@
-const insertSudoku = require('./knex');
-
 const prepis = () => {
     let t0 = Date.now();
     let [x, y, sol] = createPuzzle();
@@ -32,7 +30,6 @@ const prepis = () => {
             }
         }
         p.innerText = oneliner;
-        insertSudoku(oneliner, Boolean(home.checked));
     }
 
 }
